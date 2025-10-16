@@ -11,13 +11,15 @@ const users = [
 
 export default function UsersPage() {
   return (
+<div className="bg-white min-h-screen">
+
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-4 text-gray-400">Users List</h1>
       <ul className="space-y-2">
         {users.map((user) => (
           <li key={user.id}>
             <Link
-              href={`/dashboard/users/${user.id}`}
+              href={`/users/${user.id}`}
               className="text-blue-500 hover:underline"
             >
               {user.name}
@@ -27,5 +29,7 @@ export default function UsersPage() {
       </ul>
       <BackButton/>
     </div>
+
+</div>
   );
 }

@@ -8,9 +8,9 @@ export default function DashboardLayout({ children }) {
         <h2 className="text-xl font-bold mb-4 text-gray-400">Dashboard</h2>
         <ul className="space-y-2">
           <li><Link href="/dashboard" className="text-gray-400 hover:text-gray-700">Home</Link></li>
-          <li><Link href="/dashboard/settings" className="text-gray-400 hover:text-gray-700">Settings</Link></li>
-          <li><Link href="/dashboard/users" className="text-gray-400 hover:text-gray-700">Users</Link></li>
-          <li><Link href="/dashboard/profile" className="text-gray-400 hover:text-gray-700">User Profile</Link></li>
+          <li><Link href="/settings" className="text-gray-400 hover:text-gray-700">Settings</Link></li>
+          <li><Link href="/users" className="text-gray-400 hover:text-gray-700">Users</Link></li>
+          <li><Link href="/profile" className="text-gray-400 hover:text-gray-700">User Profile</Link></li>
         </ul>
       </aside>
 
