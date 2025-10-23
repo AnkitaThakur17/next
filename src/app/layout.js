@@ -6,11 +6,6 @@ import "./globals.css";
 import Image from "next/image";
 import ScrollToTop from "./components/UpButton";
 
-// export const metadata = {
-//   title: "My Next.js App",
-//   description: "Made by Ankita",
-// };
-
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 

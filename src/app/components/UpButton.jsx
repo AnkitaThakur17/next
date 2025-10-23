@@ -1,5 +1,6 @@
 "use client"
 
+import { FaArrowUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 export default function ScrollToTop() {
@@ -29,11 +30,13 @@ export default function ScrollToTop() {
   if (!show) return null; // hide button if not scrolled enough
 
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-8 right-8 bg-gray-500 text-white p-4 rounded-full"
-    >
-      Up
-    </button>
+<button
+  onClick={scrollToTop}
+  className="fixed bottom-8 right-8 bg-gray-500 text-white p-4 rounded-full"
+>
+  <FaArrowUp size={20} /> 
+</button>
+
+
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaCheckCircle } from "react-icons/fa"; // ya koi aur icon
 
 export default function Home() {
   const serviceCards = [
@@ -13,35 +14,35 @@ export default function Home() {
   ];
 
   const techList = [
-    "Node JS",
-    "CodeIgniter",
-    "Laravel",
-    "Bootstrap",
-    "Cake PHP",
-    "Angular",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "PHP",
-    "Swift",
-    "Java",
-    "Python",
-    "Django",
-    "React.js",
-    "Objective C",
-    "Kotlin",
-    "Flutter",
-    "SQl",
-    "MySql",
-    "MongoDB",
-    "PostgreSql",
-    "WordPress",
-    "View Js",
-    "AI/ML",
-    "Power BI",
-    "Salesforce",
-    "Next js",
-    "Azure",
+    { name: "Node JS", icon: "/icons/node.png" },
+    { name: "CodeIgniter", icon: "/icons/code.png" },
+    { name: "Laravel", icon: "/icons/lara.png" },
+    { name: "Bootstrap", icon: "/icons/boot.png" },
+    { name: "Cake PHP", icon: "/icons/cake.png" },
+    { name: "Angular", icon: "/icons/angular.png" },
+    { name: "HTML", icon: "/icons/html.png" },
+    { name: "CSS", icon: "/icons/css.png" },
+    { name: "JavaScript", icon: "/icons/js.png" },
+    { name: "PHP", icon: "/icons/php.png" },
+    { name: "Swift", icon: "/icons/swift.png" },
+    { name: "Java", icon: "/icons/java.png" },
+    { name: "Python", icon: "/icons/python.png" },
+    { name: "Django", icon: "/icons/django.png" },
+    { name: "React.js", icon: "/icons/react.png" },
+    { name: "Objective C", icon: "/icons/objC.png" },
+    { name: "Kotlin", icon: "/icons/kot.png" },
+    { name: "Flutter", icon: "/icons/flutter.png" },
+    { name: "SQL", icon: "/icons/sql.png" },
+    { name: "MySql", icon: "/icons/my.png" },
+    { name: "MongoDB", icon: "/icons/mongo.png" },
+    { name: "PostgreSQL", icon: "/icons/postgre.png" },
+    { name: "WordPress", icon: "/icons/word.png" },
+    { name: "Vue Js", icon: "/icons/vue.png" },
+    { name: "AI/ML", icon: "/icons/ai.png" },
+    { name: "Power BI", icon: "/icons/power.png" },
+    { name: "Salesforce", icon: "/icons/sales.png" },
+    { name: "Next.js", icon: "/icons/next.png" },
+    { name: "Azure", icon: "/icons/azure.png" },
   ];
 
   const industryList = [
@@ -80,14 +81,16 @@ export default function Home() {
     <>
       {/* HERO SECTION */}
       <main className="flex flex-col items-start p-20 min-h-screen bg-[#0D0B2D]">
-        <p className="mb-4 text-white font-bold mt-30 px-40">A trusted IT partner</p>
-        <h1 className="mb-6 text-white text-5xl leading-tight font-bold px-40">
+        <p className="mb-4 text-white font-bold mt-30 px-30">
+          A trusted IT partner
+        </p>
+        <h1 className="mb-6 text-white text-5xl leading-tight font-bold px-30">
           The best place for your all <br />
           <em className="text-red-600 not-italic ">Software development</em> and
           IT <br />
           Solutions.
         </h1>
-        <p className="text-white font-bold px-40">
+        <p className="text-white font-bold px-30">
           MINDIII is a leading information technology (IT) company in India,
           Canada,
           <br /> Australia, Europe, UK and USA for IT Solutions & software
@@ -98,55 +101,56 @@ export default function Home() {
 
       {/* SERVICES SECTION */}
       <div className="bg-white flex flex-col items-center py-16 px-6">
-        <h1 className="text-red-600 text-4xl font-bold mb-4">Services</h1>
-        <p className="text-gray-800 text-center mb-12">
-          We work on the latest Software Development Coding Technology services
-          <br />
+        <h1 className="text-[#FF2D55]  text-4xl font-bold mb-2">Services</h1>
+        <p className="text-gray-500 text-center font-semibold text-md mb-10">
+          <em className="not-italic text-md block font-semibold mb-3">
+            We work on the latest Software Development Coding Technology
+            services
+          </em>
           MINDIII deals in Native and Hybrid Mobile App Development like React
           Native, Flutter etc, Web Development, Progressive Web App,
           <br /> UI/UX Development, CRM & CMS portals, Wearable Device Apps etc.
         </p>
 
         {/* Services Section */}
-        <div className="flex flex-col lg:flex-row gap-12 justify-between w-full max-w-6xl">
+        <div className="flex px-50 py-10 flex-col lg:flex-row gap-12 justify-center w-full">
           {/* LEFT LIST */}
           <div className="flex-1">
-            <h1 className="text-red-600 font-bold text-3xl mb-4">
-              Services We Are Providing
+            <h1 className="text-[#FF2D55]  font-bold  text-4xl mb-4">
+              Services{" "}
+             
+              <em className="not-italic text-[#001F3F]">We Are <br/> Providing</em>
             </h1>
-            <ul className="text-gray-900 font-semibold text-lg space-y-2">
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                Android App Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                PHP Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                Angular JS Website Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                React JS Website Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                WordPress Website Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                React Native Development
-              </li>
-              <li className="hover:text-[#FF2D55] transition-colors duration-200">
-                Node JS Development
-              </li>
+
+            <ul className="text-gray-700 font-semibold text-lg space-y-2 list-none">
+              {[
+                "Android App Development",
+                "PHP Development",
+                "Angular JS Website Development",
+                "React JS Website Development",
+                "WordPress Website Development",
+                "React Native Development",
+                "Node JS Development",
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className="relative pl-6 hover:text-[#FF2D55] transition-colors duration-200 "
+                >
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[#001F3F] shadow-[0_0_4px_#001F3F]"></span>
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* RIGHT GRID CARDS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1 bg-gray-100 p-5">
             {serviceCards.map((service, i) => (
               <div
                 key={i}
-                className="border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition bg-white text-center"
+                className="border border-gray-200 px-10 py-5 shadow-[0_4px_10px_0_rgba(156,163,175,0.4)] hover:shadow-[0_8px_16px_0_rgba(156,163,175,0.6)] hover:-translate-y-1 transition bg-white flex items-center gap-3"
               >
-                <div className="text-3xl mb-3 text-red-500">🎯</div>
+                <div className="text-3xl text-red-500 mr-5">🎯</div>
                 <h4 className="font-semibold text-[#001F3F]">{service}</h4>
               </div>
             ))}
@@ -155,23 +159,28 @@ export default function Home() {
       </div>
 
       <section className="bg-[#0D0B2D] py-16 px-6 text-center text-white">
-        {/* Heading */}
         <h2 className="text-4xl font-bold text-[#FF2D55] mb-2">Technologies</h2>
-        <p className="text-gray-300 mb-2 font-bold ">We Serve Technologies</p>
-        <p className="text-gray-400 max-w-3xl font-bold mx-auto mb-12 text-sm">
+        <p className="text-gray-300 text-lg mb-2 font-bold">
+          We Serve Technologies
+        </p>
+        <p className="text-gray-400 text-lg font-bold mx-auto mb-12 text-sm">
           Looking for the best software development company? We work with the
-          latest technologies like Angular.js, React.js, Node.js, Python, Swift,
-          Kotlin, Flutter, Objective-C, Core Java, PHP and more.
+          latest technologies like Angular.js, React.js, Node.js, Python,
+          <br /> Swift, Kotlin, Flutter, Objective-C, Core Java, PHP and more.
         </p>
 
-        {/* Tech Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {techList.map((tech, i) => (
+          {techList.map((tech) => (
             <div
-              key={i}
-              className="bg-white text-[#0D0B2D] font-semibold rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              key={tech.name}
+              className="bg-white text-[#0D0B2D] font-semibold rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center"
             >
-              {tech}
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                className="w-12 h-12 mb-4 object-contain"
+              />
+              <h4 className="text-lg font-bold">{tech.name}</h4>
             </div>
           ))}
         </div>
@@ -179,7 +188,7 @@ export default function Home() {
 
       <div className="bg-white py-16 text-center">
         {/* Headin */}
-        <h2 className="text-4xl font-bold mb-2 text-[#FF2D55] ">Industries</h2>
+        <h2 className="text-4xl font-bold mb-2 text-[#FF2D55]  ">Industries</h2>
         <h6 className="text-gray-800 font-bold">
           We as MINDIII, provide on-demand IT and Software solutions for all
           leading industries
@@ -191,14 +200,17 @@ export default function Home() {
           transportation, communication, and all on-demand software <br />
           needs.
         </p>
-        {/* Tech Grid */}
-        <div className="grid grid-cols-3 grid-rows-10 gap-4 p-5 px-40 ">
+
+        <div className="grid grid-cols-3 grid-rows-10 gap-4 p-5 px-40">
           {industryList.map((ind, i) => (
             <div
               key={i}
-              className="bg-[#0D0B2D] font-semibold rounded-4xl p-4 hover:text-[#FF2D55] mt-5"
+              className="bg-[#0D0B2D] font-semibold text-white rounded-4xl p-4 hover:text-[#FF2D55] mt-5 flex items-center gap-2"
             >
-              {ind}
+              <span className="text-xl text-red-500 mr-2">
+                <FaCheckCircle />
+              </span>
+              <span>{ind}</span>
             </div>
           ))}
         </div>
@@ -297,7 +309,8 @@ export default function Home() {
           <div>
             <h3 className="text-3xl font-semibold mb-4">Get in Touch</h3>
             <p className="text-gray-300 mb-6 text-lg font-semibold">
-              We'd love to resolve your queries with<br/> personalized assistance.
+              We'd love to resolve your queries with
+              <br /> personalized assistance.
             </p>
             <div className="space-y-3 text-sm">
               <p>
@@ -305,22 +318,25 @@ export default function Home() {
                   Chat with us
                 </span>
                 <br />
-                <span className="text-white font-bold text-lg">contact@mindiii.com</span>
+                <span className="text-white font-bold text-lg">
+                  contact@mindiii.com
+                </span>
               </p>
 
               <p>
                 <span className="font-bold text-xl text-gray-400">
                   Let's discuss via call
                 </span>
-                <br/>
-                <span className="text-white font-bold text-lg">+91-9165613316</span>
+                <br />
+                <span className="text-white font-bold text-lg">
+                  +91-9165613316
+                </span>
               </p>
               <p>
-
                 <span className="font-bold text-xl text-gray-400">
                   Chat with Us
                 </span>
-                <br/>
+                <br />
                 <span className="text-white font-bold text-lg">MINDIII5</span>
               </p>
             </div>
@@ -361,7 +377,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#0B0133] p-10">
-        <div className="flex justify-between  px-5">
+        <div className="flex justify-between px-5">
           <h1 className="text-2xl font-semibold">
             “Enabling Business Make Business”
           </h1>
@@ -374,43 +390,53 @@ export default function Home() {
             className="object-contain mr-20"
           />
         </div>
-        <div className="p-5 flex felx-row items-center justify-between mt-10">
+        <div className="p-5 flex flex-row items-center justify-between mt-10">
           <ul>
             <li className="font-semibold text-xl">Quick Links</li>
             <div className="h-[3px] bg-[#FF2D55] w-1/2 mt-1 rounded"></div>
 
-            <li className="hover:text-[#FF2D55] mt-5">Career</li>
-            <li className="hover:text-[#FF2D55]">About Us</li>
-            <li className="hover:text-[#FF2D55]">Contact Us</li>
+            <li className="hover:text-[#FF2D55] mt-5 text-white mb-3">
+              Career
+            </li>
+            <li className="hover:text-[#FF2D55] text-white mb-3">About Us</li>
+            <li className="hover:text-[#FF2D55] text-white mb-3">Contact Us</li>
           </ul>
 
           <ul>
             <li className="font-semibold text-xl">Sevices</li>
-             <div className="h-[3px] bg-[#FF2D55] w-1/4 mt-1 rounded"></div>
-            <li className="hover:text-[#FF2D55] mt-5">
+            <div className="h-[3px] bg-[#FF2D55] w-1/4 mt-1 rounded"></div>
+            <li className=" text-white hover:text-[#FF2D55] mt-5 mb-2">
               Mobile App design & Development
             </li>
-            <li className="hover:text-[#FF2D55]">Web Development</li>
-            <li className="hover:text-[#FF2D55]">UI/UX Development</li>
-            <li className="hover:text-[#FF2D55]">Ecommerce Development</li>
-            <li className="hover:text-[#FF2D55]">Quality Assurance</li>
+            <li className="text-white hover:text-[#FF2D55] mb-2">
+              Web Development
+            </li>
+            <li className="text-white hover:text-[#FF2D55] mb-2">
+              UI/UX Development
+            </li>
+            <li className="text-white hover:text-[#FF2D55] mb-2">
+              Ecommerce Development
+            </li>
+            <li className="text-white hover:text-[#FF2D55] mb-2">
+              Quality Assurance
+            </li>
           </ul>
 
           <ul>
             <li className="font-semibold text-xl">Contact Us</li>
             <div className="h-[3px] bg-[#FF2D55] w-1/4 mt-1 rounded"></div>
-            <li className="mt-5">
+            <li className="mt-5 text-white">
               501,504 Krishna Tower, Main
               <br /> Rd, above ICICI Bank,
               <br /> Pipliyahana, Indore, Madhya
               <br /> Pradesh 452016
             </li>
-            <li>+91-916563316</li>
-            <li>contact@mindiii.com</li>
+            <li className="text-white mt-3">+91-916563316</li>
+            <li className="text-white mt-3">contact@mindiii.com</li>
           </ul>
         </div>
 
-        <div className="flex justify-between items-start flex-wrap gap-2 p-5">
+        <div className="flex justify-between items-start flex-wrap gap-2 p-5 mt-10">
           <div className="font-bold flex flex-row flex-wrap gap-2">
             <Image
               src="/can.png"
@@ -420,7 +446,7 @@ export default function Home() {
               priority
               className="object-contain"
             />
-            <h1>Canada |</h1>
+            <h1 className="text-white">Canada |</h1>
 
             <Image
               src="/india.png"
@@ -430,7 +456,7 @@ export default function Home() {
               priority
               className="object-contain"
             />
-            <h1>India |</h1>
+            <h1 className="text-white">India |</h1>
 
             <Image
               src="/spain.png"
@@ -440,7 +466,7 @@ export default function Home() {
               priority
               className="object-contain"
             />
-            <h1>Spain |</h1>
+            <h1 className="text-white">Spain |</h1>
 
             <div className="w-full"></div>
 
@@ -452,7 +478,7 @@ export default function Home() {
               priority
               className="object-contain"
             />
-            <h1>UK |</h1>
+            <h1 className="text-white">UK |</h1>
 
             <Image
               src="/aus.png"
@@ -462,7 +488,7 @@ export default function Home() {
               priority
               className="object-contain"
             />
-            <h1>Australia |</h1>
+            <h1 className="text-white">Australia |</h1>
           </div>
 
           <div className="flex flex-row gap-5 mt-2">
@@ -544,7 +570,7 @@ export default function Home() {
         <div className="py-4 px-10">
           <hr className="border-t-2 border-gray-300" />
         </div>
-        <p className="text-center">
+        <p className="text-center text-white">
           Copyright © MINDIII Systems Pvt. Ltd. 2024 | All rights reserved.
         </p>
       </footer>
