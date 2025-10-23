@@ -81,16 +81,16 @@ export default function Home() {
     <>
       {/* HERO SECTION */}
       <main className="flex flex-col items-start p-20 min-h-screen bg-[#0D0B2D]">
-        <p className="mb-4 text-white font-bold mt-30 px-30">
+        <p className="mb-4 text-white font-bold mt-30 px-10">
           A trusted IT partner
         </p>
-        <h1 className="mb-6 text-white text-5xl leading-tight font-bold px-30">
+        <h1 className="mb-6 text-white text-5xl leading-tight font-bold px-10">
           The best place for your all <br />
           <em className="text-red-600 not-italic ">Software development</em> and
           IT <br />
           Solutions.
         </h1>
-        <p className="text-white font-bold px-30">
+        <p className="text-white font-bold px-10">
           MINDIII is a leading information technology (IT) company in India,
           Canada,
           <br /> Australia, Europe, UK and USA for IT Solutions & software
@@ -118,8 +118,9 @@ export default function Home() {
           <div className="flex-1">
             <h1 className="text-[#FF2D55]  font-bold  text-4xl mb-4">
               Services{" "}
-             
-              <em className="not-italic text-[#001F3F]">We Are <br/> Providing</em>
+              <em className="not-italic text-[#001F3F]">
+                We Are <br /> Providing
+              </em>
             </h1>
 
             <ul className="text-gray-700 font-semibold text-lg space-y-2 list-none">
@@ -148,9 +149,9 @@ export default function Home() {
             {serviceCards.map((service, i) => (
               <div
                 key={i}
-                className="border border-gray-200 px-10 py-5 shadow-[0_4px_10px_0_rgba(156,163,175,0.4)] hover:shadow-[0_8px_16px_0_rgba(156,163,175,0.6)] hover:-translate-y-1 transition bg-white flex items-center gap-3"
+                className="border border-gray-200 p-5 shadow-[0_4px_10px_0_rgba(156,163,175,0.4)] hover:shadow-[0_8px_16px_0_rgba(156,163,175,0.6)] hover:-translate-y-1 transition bg-white flex items-center gap-3"
               >
-                <div className="text-3xl text-red-500 mr-5">🎯</div>
+                <div className="text-3xl text-red-500 mr-2">🎯</div>
                 <h4 className="font-semibold text-[#001F3F]">{service}</h4>
               </div>
             ))}
@@ -178,7 +179,7 @@ export default function Home() {
               <img
                 src={tech.icon}
                 alt={tech.name}
-                className="w-12 h-12 mb-4 object-contain"
+                className="w-13 h-13 mb-4 object-contain"
               />
               <h4 className="text-lg font-bold">{tech.name}</h4>
             </div>
@@ -217,168 +218,173 @@ export default function Home() {
       </div>
 
       {/* Form */}
-      <div className="bg-white py-16 px-8 md:px-20 flex flex-col md:flex-row gap-10 border-4 border-gray-800  border-t-[#0D0B2D]  rounded-2xl">
+      <div className="bg-white p-8 m-10 md:px-20 flex flex-col md:flex-row rounded-2xl">
         {/* Left Side – Contact Form */}
-        <div className="border border-gray-200 p-8 rounded-2xl shadow-sm flex-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        <div className="bg-white border p-5 shadow-sm flex-1 border-4 border-t-[#0D0B2D] mb-[-100]">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
             Connect with Us today and get the best IT & <br />
             Software solutions |{" "}
             <em className="text-[#FF2D55] not-italic">MINDIII</em>
           </h2>
 
-          <p className="text-gray-600 font-semibold mb-8">
+          <p className="text-gray-600 font-semibold text-sm mb-8">
             Feel free to contact us via email, phone, Skype & WhatsApp. We'll be
             pleased to assist you with all your software consulting needs.
           </p>
 
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Full Name */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Full Name
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Full Name"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
-              />
-            </div>
+          {/* </form> */}
+          <div className="flex flex-col md:flex-row gap-10">
+            {/* Form Section */}
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+              {/* Full Name */}
+              <div>
+                <label className="block text-gray-700 font-medium mb-1">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Full Name"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
+                />
+              </div>
 
-            {/* Email */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                placeholder="Enter Email"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
-              />
-            </div>
+              {/* Email */}
+              <div>
+                <label className="block text-gray-700 font-medium mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
+                />
+              </div>
 
-            {/* Contact No */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Contact No
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Contact Number"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
-              />
-            </div>
+              {/* Contact No */}
+              <div>
+                <label className="block text-gray-700 font-medium mb-1">
+                  Contact No
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Contact Number"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
+                />
+              </div>
 
-            {/* Teams ID / WhatsApp */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Teams ID / WhatsApp
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Teams ID / WhatsApp"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
-              />
-            </div>
+              {/* Teams ID / WhatsApp */}
+              <div>
+                <label className="block text-gray-700 font-medium mb-1">
+                  Teams ID / WhatsApp
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Teams ID / WhatsApp"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
+                />
+              </div>
 
-            {/* About Project */}
-            <div className="md:col-span-2">
-              <label className="block text-gray-700 font-medium mb-1">
-                About Project*
-              </label>
-              <textarea
-                rows="4"
-                placeholder="About Project"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
-              ></textarea>
-            </div>
+              {/* About Project */}
+              <div className="md:col-span-2">
+                <label className="block text-gray-700 font-medium mb-1">
+                  About Project*
+                </label>
+                <textarea
+                  rows="4"
+                  placeholder="About Project"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#FF2D55] outline-none"
+                ></textarea>
+              </div>
 
-            {/* Submit Button */}
-            <div className="md:col-span-2 flex justify-start">
-              <button
-                type="submit"
-                className="bg-[#FF2D55] text-white font-semibold px-6 py-2 rounded-lg hover:bg-[#e5264b] transition"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
+              {/* Submit Button */}
+              <div className="md:col-span-2 flex justify-start">
+                <button
+                  type="submit"
+                  className="bg-[#FF2D55] text-white font-semibold px-8 rounded-lg hover:bg-[#e5264b] transition"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
 
-        {/* Right Side – Contact Info */}
-        <div className="bg-[#0D0B2D] text-white rounded-2xl p-8 flex-1 flex flex-col justify-between w-half">
-          <div>
-            <h3 className="text-3xl font-semibold mb-4">Get in Touch</h3>
-            <p className="text-gray-300 mb-6 text-lg font-semibold">
-              We'd love to resolve your queries with
-              <br /> personalized assistance.
-            </p>
-            <div className="space-y-3 text-sm">
-              <p>
-                <span className="font-bold text-xl text-gray-400">
-                  Chat with us
-                </span>
-                <br />
-                <span className="text-white font-bold text-lg">
-                  contact@mindiii.com
-                </span>
-              </p>
-
-              <p>
-                <span className="font-bold text-xl text-gray-400">
-                  Let's discuss via call
-                </span>
-                <br />
-                <span className="text-white font-bold text-lg">
-                  +91-9165613316
-                </span>
-              </p>
-              <p>
-                <span className="font-bold text-xl text-gray-400">
-                  Chat with Us
-                </span>
-                <br />
-                <span className="text-white font-bold text-lg">MINDIII5</span>
-              </p>
-            </div>
-            <div className="py-4 mt-70">
-              <hr className="border-t-2 border-gray-400" />
-            </div>
-            <div className="flex flex-row gap-5 ">
-              <Image
-                src="/facebook.png"
-                alt="facebook"
-                width={40}
-                height={20}
-                priority
-                className="object-contain border rounded-full"
-              />
-
-              <Image
-                src="/linkedin.png"
-                alt="linkedin"
-                width={40}
-                height={20}
-                priority
-                className="object-contain border rounded-full"
-              />
-
-              <Image
-                src="/insta.jpeg"
-                alt="Instagram"
-                width={40}
-                height={20}
-                priority
-                className="object-contain border rounded-full"
-              />
+            {/* Contact Box Section */}
+            <div className="bg-[#0D0B2D] text-white rounded-2xl p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="text-3xl font-semibold mb-4">Get in Touch</h3>
+                <p className="text-gray-300 mb-6 text-lg font-semibold">
+                  We'd love to resolve your queries with
+                  <br /> personalized assistance.
+                </p>
+                <div className="space-y-3 text-sm">
+                  <p>
+                    <span className="font-bold text-xl text-gray-400">
+                      Chat with us
+                    </span>
+                    <br />
+                    <span className="text-white font-bold text-lg">
+                      contact@mindiii.com
+                    </span>
+                  </p>
+                  <p>
+                    <span className="font-bold text-xl text-gray-400">
+                      Let's discuss via call
+                    </span>
+                    <br />
+                    <span className="text-white font-bold text-lg">
+                      +91-9165613316
+                    </span>
+                  </p>
+                  <p>
+                    <span className="font-bold text-xl text-gray-400">
+                      Chat with Us
+                    </span>
+                    <br />
+                    <span className="text-white font-bold text-lg">
+                      MINDIII5
+                    </span>
+                  </p>
+                </div>
+                <div className="py-4 mt-6">
+                  <hr className="border-t-2 border-gray-400" />
+                </div>
+                <div className="flex flex-row gap-5 mt-4">
+                  <Image
+                    src="/facebook.png"
+                    alt="facebook"
+                    width={40}
+                    height={20}
+                    priority
+                    className="object-contain border rounded-full"
+                  />
+                  <Image
+                    src="/linkedin.png"
+                    alt="linkedin"
+                    width={40}
+                    height={20}
+                    priority
+                    className="object-contain border rounded-full"
+                  />
+                  <Image
+                    src="/insta.jpeg"
+                    alt="Instagram"
+                    width={40}
+                    height={20}
+                    priority
+                    className="object-contain border rounded-full"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Right Side – Contact Info */}
       </div>
 
       {/* Footer */}
       <footer className="bg-[#0B0133] p-10">
-        <div className="flex justify-between px-5">
-          <h1 className="text-2xl font-semibold">
+        <div className="flex justify-between px-5 mt-5">
+          <h1 className="text-2xl font-semibold text-white">
             “Enabling Business Make Business”
           </h1>
           <Image
@@ -390,9 +396,9 @@ export default function Home() {
             className="object-contain mr-20"
           />
         </div>
-        <div className="p-5 flex flex-row items-center justify-between mt-10">
+        <div className="p-5 flex flex-row items-center justify-between mt-5">
           <ul>
-            <li className="font-semibold text-xl">Quick Links</li>
+            <li className="font-semibold text-xl text-white">Quick Links</li>
             <div className="h-[3px] bg-[#FF2D55] w-1/2 mt-1 rounded"></div>
 
             <li className="hover:text-[#FF2D55] mt-5 text-white mb-3">
@@ -403,7 +409,7 @@ export default function Home() {
           </ul>
 
           <ul>
-            <li className="font-semibold text-xl">Sevices</li>
+            <li className="font-semibold text-xl text-white">Sevices</li>
             <div className="h-[3px] bg-[#FF2D55] w-1/4 mt-1 rounded"></div>
             <li className=" text-white hover:text-[#FF2D55] mt-5 mb-2">
               Mobile App design & Development
@@ -423,7 +429,7 @@ export default function Home() {
           </ul>
 
           <ul>
-            <li className="font-semibold text-xl">Contact Us</li>
+            <li className="font-semibold text-xl text-white">Contact Us</li>
             <div className="h-[3px] bg-[#FF2D55] w-1/4 mt-1 rounded"></div>
             <li className="mt-5 text-white">
               501,504 Krishna Tower, Main
